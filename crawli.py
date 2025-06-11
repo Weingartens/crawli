@@ -1,3 +1,5 @@
+# pip install pyyaml tenacity tqdm pandas
+
 import logging
 import cloudscraper
 import time
