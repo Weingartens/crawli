@@ -1,0 +1,31 @@
+import argparse
+
+def setup_cli():
+    """Setup command line interface"""
+    parser = argparse.ArgumentParser(
+        description='Crawli - Advanced Universal Web Crawler',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python crawli.py --url https://example.com --max-pages 100
+  python crawli.py --url https://example.com --config custom_config.yaml
+  python crawli.py --url https://example.com --output json --delay 2.0
+        """
+    )
+    
+    parser.add_argument('--url', required=True, 
+                       help='Base URL to start crawling from')
+    parser.add_argument('--max-pages', type=int, default=50,
+                       help='Maximum number of pages to crawl (default: 50)')
+    parser.add_argument('--config', 
+                       help='Path to configuration file (default: config.yaml)')
+    parser.add_argument('--output', choices=['txt', 'json', 'csv'], 
+                       default='txt', help='Output format (default: txt)')
+    parser.add_argument('--delay', type=float, default=1.0,
+                       help='Delay between requests in seconds (default: 1.0)')
+    parser.add_argument('--verbose', '-v', action='store_true',
+                       help='Enable verbose logging')
+    parser.add_argument('--resume', action='store_true',
+                       help='Resume from previous session')
+    
+    return parser.parse_args()
