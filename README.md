@@ -315,12 +315,3 @@ If you encounter any issues or have questions, please:
 
 ⭐ **Star this repo if you find it useful!**
 ```
-
-Die README ist jetzt deutlich umfangreicher und enthält:
-
-- **Detaillierte Installationsanweisungen** für verschiedene Betriebssysteme
-- **Virtual Environment Setup** mit spezifischen Befehlen
-- **Troubleshooting** für häufige Probleme
-- **Environment Verification** Befehle
-- **Requirements.txt** Beispiel
-- **Vollständige Workflow-Beispiele** von der Installation bis zur Ausführung
