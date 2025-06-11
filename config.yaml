@@ -1,7 +1,29 @@
-base_url: "https://example.com/"
-max_pages: 50
-rate_limit: 1.0
-output_format: "txt"
+# config.yaml
+crawler:
+  max_pages: 100
+  delay: 1.5
+  timeout: 30
+  max_retries: 3
+  
+output:
+  format: "json"  # txt, json, csv
+  filename_prefix: "crawli_results"
+  
 patterns:
-  include: ["video"]
-  exclude: ["playlist", "ads"]
+  include:
+    - "/video/"
+    - "/content/"
+  exclude:
+    - "/playlist/"
+    - "/ads/"
+    - "/login/"
+
+headers:
+  user_agents:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+    - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+
+proxies:
+  enabled: false
+  proxy_list: []
