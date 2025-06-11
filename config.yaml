@@ -1,0 +1,7 @@
+base_url: "https://example.com/"
+max_pages: 50
+rate_limit: 1.0
+output_format: "txt"
+patterns:
+  include: ["video"]
+  exclude: ["playlist", "ads"]
